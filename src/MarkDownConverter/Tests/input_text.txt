@@ -1,0 +1,1 @@
+This **is** simple _[http://index.hu](link)_ and this is a picture![http://valami.hu/image.jp](of a dog).
