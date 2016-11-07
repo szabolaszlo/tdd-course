@@ -46,7 +46,7 @@ class MarkDownConverterTest extends \PHPUnit_Framework_TestCase
 
         $this->object->convert($inputFile, $outputFile);
 
-        $expected = 'This <strong>is</strong> simple <i><a href="http://index.hu">link</a></i> and this is a picture<img scr="http://valami.hu/image.jp" alt="of a dog" />.';
+        $expected = 'This <strong>is</strong> simple <i><a href="http://index.hu">link</a></i> and this is a picture<img scr="http://val_ami.hu/i_mage.jpg" alt="of a dog" />.';
         $actual = file_get_contents($outputFile);
 
         unlink($outputFile);
@@ -65,7 +65,7 @@ class MarkDownConverterTest extends \PHPUnit_Framework_TestCase
 
         $this->object->convert($inputFile, null);
 
-        $expected = 'This <strong>is</strong> simple <i><a href="http://index.hu">link</a></i> and this is a picture<img scr="http://valami.hu/image.jp" alt="of a dog" />.';
+        $expected = 'This <strong>is</strong> simple <i><a href="http://index.hu">link</a></i> and this is a picture<img scr="http://val_ami.hu/i_mage.jpg" alt="of a dog" />.';
         $actual = ob_get_contents();
         ob_clean();
 

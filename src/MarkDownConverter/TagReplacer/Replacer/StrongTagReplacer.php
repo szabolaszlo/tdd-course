@@ -12,8 +12,8 @@ class StrongTagReplacer implements ITagReplacer
 {
     public function replace($content)
     {
-        $pattern = '/\*{2}(.*)\*{2}/U';
-        $replacement = '<strong>$1</strong>';
+        $pattern = '/(^|\s|>|\b)[*]{2}(?=\S)([\s\S]+?)[*]{2}(?=\b|<|\s|$)/';
+        $replacement = '$1<strong>$2</strong>';
         return preg_replace($pattern, $replacement, $content);
     }
 }

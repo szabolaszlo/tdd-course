@@ -13,8 +13,8 @@ class ItalicTagReplacer implements ITagReplacer
 {
     public function replace($content)
     {
-        $pattern = '/_{1}(.*)_{1}/U';
-        $replacement = '<i>$1</i>';
+        $pattern = '/(^|\s|>|\b)_(?=\S)([\s\S]+?)_(?=\b|<|\s|$)/';
+        $replacement = '$1<i>$2</i>';
         return preg_replace($pattern, $replacement, $content);
     }
 }

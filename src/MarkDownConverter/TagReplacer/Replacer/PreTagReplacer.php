@@ -13,8 +13,8 @@ class PreTagReplacer implements ITagReplacer
 {
     public function replace($content)
     {
-        $pattern = '/`{1}(.*)`{1}/U';
-        $replacement = '<pre>$1</pre>';
+        $pattern = '/(^|\s|>|\b)`(?=\S)([\s\S]+?)`(?=\b|<|\s|$)/';
+        $replacement = '$1<pre>$2</pre>';
         return preg_replace($pattern, $replacement, $content);
     }
 }

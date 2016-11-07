@@ -40,7 +40,7 @@ class ItalicTagReplacerTest extends \PHPUnit_Framework_TestCase
     public function testReplaceContentWithConfuseReplaceAbleString()
     {
         $content = 'There is a __strong text__ in a string and other_not';
-        $expected = 'There is a <i></i>strong text<i></i> in a string and other_not';
+        $expected = 'There is a <i>_strong text_</i> in a string and other_not';
 
         $this->assertEquals($expected, $this->object->replace($content));
     }

@@ -39,7 +39,7 @@ class PreTagReplacerTest extends \PHPUnit_Framework_TestCase
     public function testReplaceContentWithConfuseReplaceAbleString()
     {
         $content = 'There is a ``pre text`` in a string and ```other``` one and `not';
-        $expected = 'There is a <pre></pre>pre text<pre></pre> in a string and <pre></pre><pre>other</pre><pre></pre> one and `not';
+        $expected = 'There is a <pre>`pre text`</pre> in a string and <pre>`</pre>other<pre>`</pre> one and `not';
 
         $this->assertEquals($expected, $this->object->replace($content));
     }

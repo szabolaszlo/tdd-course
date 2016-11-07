@@ -39,7 +39,7 @@ class StrongTagReplacerTest extends \PHPUnit_Framework_TestCase
     public function testReplaceContentWithConfuseReplaceAbleString()
     {
         $content = 'There is a ****strong text**** in a string and ***other*** one';
-        $expected = 'There is a <strong></strong>strong text<strong></strong> in a string and <strong>*other</strong>* one';
+        $expected = 'There is a <strong>**strong text**</strong> in a string and <strong>*other*</strong> one';
 
         $this->assertEquals($expected, $this->object->replace($content));
     }

@@ -1,1 +1,1 @@
-This **is** simple _[http://index.hu](link)_ and this is a picture![http://valami.hu/image.jp](of a dog).
+This **is** simple _[http://index.hu](link)_ and this is a picture![http://val_ami.hu/i_mage.jpg](of a dog).
